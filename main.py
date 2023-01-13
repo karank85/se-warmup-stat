@@ -11,12 +11,14 @@ if len(sys.argv) == 2:
         numbers = []
         for n in output:
             numbers += [int(n)]
-    
-        print("Statistic Summary")
-        print("mean:", np.mean(numbers))
-        print("std:",  np.std(numbers))
-        print("min:", np.min(numbers))
-        print("max:", np.max(numbers))
+        if len(numbers) > 0:
+            print("Statistic Summary")
+            print("mean:", np.mean(numbers))
+            print("std:",  np.std(numbers))
+            print("min:", np.min(numbers))
+            print("max:", np.max(numbers))
+        else:
+            print("No numbers")
     except:
         print("File not found")
 else:
