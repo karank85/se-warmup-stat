@@ -10,7 +10,11 @@ if len(sys.argv) == 2:
 
         numbers = []
         for n in output:
-            numbers += [int(n)]
+            try:
+                numbers += [int(n)]
+            except:
+                print("Not number:", n)
+                
         if len(numbers) > 0:
             print("Statistic Summary")
             print("mean:", np.mean(numbers))
